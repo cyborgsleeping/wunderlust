@@ -118,20 +118,38 @@ header {
 	padding: 1rem;
 }
 
-#logo {width: 12em;
+
+#intro p {
+margin: 2em;
+}
+
+#logo img {width: 15em;
 margin-left: -2em;
 }
 
 
-nav a {text-decoration: none;}
+nav a {
+	display: block;
+	text-decoration: none;
+	color: var(--black);
+	background-color: var(--teal);
+	border: 1px solid var(--black);
+	padding: 1rem;
+}
 
 ul {margin:0;
 padding:0;
 }
 
+#menu-toggle label {
+	color: var(--black);
+	background-color: var(--yellow);
+}
+
 #img-grid {display:grid;
 grid-template-columns: 1fr;
 grid-gap: 1em;
+margin: 1em;
 }
 
 #img-grid img {
@@ -151,7 +169,6 @@ grid-gap: 1em;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-
 }
 
 #plan section {background-color: var(--teal);
@@ -160,6 +177,7 @@ border-radius: 5px;
 border: 2px solid var(--white);
 }
 
+#testimonials {margin-bottom: 1rem;}
 
 #testimonials h4 {font-size: 1.5em;
 }
@@ -182,12 +200,32 @@ text-align:center;
 padding: 2em;
 }
 
+form {display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform:uppercase;
+}
+
 form input {padding:1em;
 border: 2px solid var(--purple);
 }
 
+input[type="submit"]{
+background-color:var(--purple);
+color:var(--white);
+}
+
+input {width:95%;
+margin:1em;
+}
+
 fieldset {display: flex;
-flex-direction: column;
+	flex-direction:row;
+	border: 2px;
+}
+
+fieldset legend {
+font-weight:bold;
 }
 
 footer {background-color: var(--light-gray);
@@ -207,6 +245,10 @@ footer a {text-decoration: none;
 @media screen and (min-width: 768px) {
 
 h3 {text-align: left;}
+
+#intro p {
+	margin: 3em;
+	}
 
 #plan div{
 grid-template-columns: 1fr 1fr;
@@ -253,6 +295,14 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 
 #about div {
 grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+form {flex-direction: row;
+	padding: 3em;
+}
+
+input {width: 75%;
+margin: 0 auto 0.5rem auto;
 }
 
 footer {justify-content: end;
