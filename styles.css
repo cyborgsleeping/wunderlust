@@ -124,9 +124,13 @@ margin: 2em;
 }
 
 #logo img {width: 15em;
-margin-left: -2em;
 }
 
+/* NAVIGATION */
+
+nav {margin: 0;
+padding: 0;
+}
 
 nav a {
 	display: block;
@@ -135,16 +139,24 @@ nav a {
 	background-color: var(--teal);
 	border: 1px solid var(--black);
 	padding: 1rem;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-ul {margin:0;
-padding:0;
+ul {width: 430px;
 }
 
 #menu-toggle label {
 	color: var(--black);
 	background-color: var(--yellow);
+	cursor: pointer;
 }
+
+#toggle {display:none;
+}
+
+/* IMAGE GRID */
 
 #img-grid {display:grid;
 grid-template-columns: 1fr;
@@ -156,6 +168,8 @@ margin: 1em;
 	max-width: 100%;
 	width:100%;}
 
+
+/* SECTIONS */
 
 #plan {background-color:var(--yellow);
 }
@@ -176,6 +190,7 @@ padding: 1em;
 border-radius: 5px;
 border: 2px solid var(--white);
 }
+
 
 #testimonials {margin-bottom: 1rem;}
 
@@ -200,15 +215,28 @@ text-align:center;
 padding: 2em;
 }
 
+/* FORM SECTION */
+
 form {display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-transform:uppercase;
+	padding: 1em;
+	width:430px;
 }
 
 form input {padding:1em;
 border: 2px solid var(--purple);
 }
+
+label {font-weight:bold;}
+
+.radio-label {font-weight: lighter;}
+
+
+select { border: 2px solid var(--purple);
+}
+
 
 input[type="submit"]{
 background-color:var(--purple);
@@ -219,6 +247,7 @@ input {width:95%;
 margin:1em;
 }
 
+
 fieldset {display: flex;
 	flex-direction:row;
 	border: 2px;
@@ -227,6 +256,8 @@ fieldset {display: flex;
 fieldset legend {
 font-weight:bold;
 }
+
+/* FOOTER */
 
 footer {background-color: var(--light-gray);
 padding: 1.5em;
@@ -243,6 +274,8 @@ footer a {text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
+
+ul {width:100%;}
 
 h3 {text-align: left;}
 
@@ -277,10 +310,41 @@ footer {flex-direction: row;
 
 h2, h3 {padding: 1em;}
 
+header { justify-content:flex-start;
+}
+
+header p {
+	margin: 50px 0 50px 0;
+	padding: 2em;
+	} 
+
+nav label {visibility:hidden;
+}
+
+nav {position:absolute;
+top: 0;
+right: 0;
+}
+
+nav a {
+	background-color: var(--white);
+	border: none;
+	
+}
+
+nav a:hover {background-color: var(--yellow);}
+
+ul {display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap:1em;
+	max-height: 100%;
+}
+
 #img-grid {
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
 		}
+
 
 #testimonials div {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -297,8 +361,9 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-form {flex-direction: row;
-	padding: 3em;
+form {flex-direction:row;
+	padding: 2em;
+	width:80%;
 }
 
 input {width: 75%;
